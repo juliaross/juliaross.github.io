@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+$mine-shaft: #333333;
+$silver: #cacaca;
+$eucalyptus: #25786b;
+$puerto-rico: #3dc9b3;
+
+
+html {
+	height: 100%;
+}
+body {
+	background-color: $mine-shaft;
+	height: 100%;
+	margin: 0;
+	font-family: "Lato";
+}
+* {
+	box-sizing: border-box;
+}
+
+
+.container {
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 20px;
+		p {
+		 color: $silver;
+		 font-size: 12px;
+		 margin: 0px;
+		 line-height: 2;	
+		}
+}
+.links {
+		@media only screen and (max-width: 768px) {
+		display: none;
+	}
+}
+.link {
+	display: block;
+	color: $silver;
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 2;
+	&:hover {
+		cursor: pointer;
+		color: $eucalyptus;
+		transition: all 500ms;
+	}
+}
+.title {
+	font-size: 45px;
+	text-transform: uppercase;
+	color: $silver;
+	margin: 0;
+}
+
+.works {
+	min-width: 60%;
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	} 
+}
+.item {
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	border-bottom: 4px solid $eucalyptus;
+
+		&:hover {
+			border-bottom: 4px solid $puerto-rico;
+			transition: all 500ms;
+		}
+		&__link {
+			text-decoration: none;
+			color: $silver;
+			margin-bottom: 30px;
+			line-height: 1.5;
+			font-size: 16px;
+		}
+		&__description {
+			margin-top: 23px;
+			color: $silver;
+		}
+		a:hover {
+			cursor: pointer;
+			color: #fff;
+			transition: all 700ms;
+		}
+}
+
+
+
+
