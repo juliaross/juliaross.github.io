@@ -58,24 +58,19 @@ body {
       width: 100%; } }
 
 .item {
-  padding-bottom: 10px;
   margin-bottom: 30px;
   border-bottom: 4px solid #25786b; }
   .item:hover {
     border-bottom: 4px solid #3dc9b3;
-    transition: all 500ms; }
+    transition: all 600ms; }
   .item__link {
+    display: block;
     text-decoration: none;
     color: #cacaca;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    font-size: 16px; }
+    line-height: 1.5; }
   .item__description {
-    margin-top: 23px;
-    color: #cacaca; }
-  .item a:hover {
-    cursor: pointer;
-    color: #fff;
-    transition: all 700ms; }
+    color: #cacaca;
+    margin: 0;
+    padding: 5px 0px 20px; }
 
 /*# sourceMappingURL=style.css.map */
