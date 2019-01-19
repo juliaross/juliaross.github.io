@@ -123,6 +123,10 @@ ul {
 	background: url(../images/main-banner.jpg);
 	background-size: cover;
 	padding-top: 60px;
+
+	@media only screen and (max-width: 350px) {
+		padding-top: 0px;
+	}
 }
 .main-screen__title {
 	font-size: 60px;
