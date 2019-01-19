@@ -123,6 +123,7 @@ ul {
 	background: url(../images/main-banner.jpg);
 	background-size: cover;
 	padding-top: 60px;
+	height: 100%;
 
 	@media only screen and (max-width: 350px) {
 		padding-top: 0px;
@@ -161,6 +162,10 @@ ul {
 
 .step {
 	margin: 50px 0px 90px 0px;
+
+	@media only screen and (max-width: 350px) {
+		margin-top: 90px;
+	}
 }
 .step-list {
 	overflow: hidden;
@@ -212,6 +217,10 @@ ul {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	background-color: $spring-wood;
+
+	@media only screen and (max-width: 350px) {
+		margin-top: 0px;
+	}
 }
 .advantage-item {
 	margin-bottom: 20px;
