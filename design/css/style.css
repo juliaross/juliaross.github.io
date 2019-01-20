@@ -36,13 +36,22 @@ h1, h2, h3 {
 h1 {
   font-size: 80px;
   margin-bottom: 50px; }
+  @media only screen and (max-width: 590px) {
+    h1 {
+      font-size: 60px; } }
 
 h2 {
   font-size: 48px;
   margin-bottom: 26px; }
+  @media only screen and (max-width: 590px) {
+    h2 {
+      font-size: 28px; } }
 
 h3 {
   font-size: 36px; }
+  @media only screen and (max-width: 590px) {
+    h3 {
+      font-size: 20px; } }
 
 .header {
   display: grid;
@@ -204,7 +213,11 @@ h3 {
   color: #fff;
   font-size: 24px;
   max-width: 440px;
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  line-height: 1.5; }
+  @media only screen and (max-width: 590px) {
+    .block__description {
+      font-size: 18px; } }
 .block__btn {
   display: inline-block;
   border: 3px solid #eec9a2;
@@ -215,5 +228,84 @@ h3 {
   text-decoration: none; }
   .block__btn:hover {
     border: 3px solid #7bb6c3; }
+
+.subscription {
+  text-align: center;
+  color: #92a1a9;
+  margin: 100px 0px; }
+  .subscription__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .subscription__title {
+    font-size: 35px;
+    margin-bottom: 25px; }
+    @media only screen and (max-width: 590px) {
+      .subscription__title {
+        font-size: 26px; } }
+  .subscription__description {
+    color: #7f919b;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5; }
+    @media only screen and (max-width: 590px) {
+      .subscription__description {
+        font-size: 14px; } }
+  .subscription__email {
+    border: 3px solid #63757e;
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #272f45;
+    color: #92a1a9;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    min-width: 265px;
+    text-align: center; }
+    .subscription__email::placeholder {
+      color: #92a1a9;
+      text-align: center; }
+  .subscription__link {
+    display: inline-block;
+    border: 3px solid #82c9d8;
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    background-color: #272f45;
+    margin: 10px 0px;
+    min-width: 265px;
+    cursor: pointer; }
+    .subscription__link:hover {
+      border: 3px solid #7bb6c3; }
+
+.footer {
+  text-align: center;
+  margin-bottom: 50px; }
+
+.nav {
+  margin: 20px 0px; }
+  .nav__item {
+    display: inline-block;
+    margin-right: 15px;
+    position: relative; }
+    .nav__item + li:before {
+      content: ".";
+      font-size: 50px;
+      color: #92a1a9;
+      position: absolute;
+      top: -32px; }
+  .nav__link {
+    color: #92a1a9;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 30px; }
+    .nav__link:hover {
+      color: #82c9d8; }
+    @media only screen and (max-width: 600px) {
+      .nav__link {
+        font-size: 12px; } }
 
 /*# sourceMappingURL=style.css.map */
