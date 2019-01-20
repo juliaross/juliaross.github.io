@@ -98,15 +98,15 @@ ul {
   cursor: pointer; }
 
 .main-screen {
-  height: calc(100% - 85px);
+  min-height: calc(100% - 85px);
   width: 100%;
   background: url(../images/main-banner.jpg);
   background-size: cover;
-  padding-top: 60px;
-  height: 100%; }
+  padding-top: 60px; }
   @media only screen and (max-width: 350px) {
     .main-screen {
-      padding-top: 0px; } }
+      padding-top: 0px;
+      padding-bottom: 20px; } }
 
 .main-screen__title {
   font-size: 60px; }
