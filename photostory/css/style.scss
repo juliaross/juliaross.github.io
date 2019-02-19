@@ -7,8 +7,6 @@ $alto: #dfdfdf;
 $gold: #ffd200;
 
 
-/* @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"); */
-
 * {
 	padding: 0px;
 	margin: 0px;
@@ -21,9 +19,6 @@ html {
 body {
 	font-family: 'Krub', sans-serif;
 	height: 100%;
-}
-header {
-	/* height: 100%; */
 }
 a {
 	transition: all 0.5s;
@@ -46,17 +41,19 @@ ul {
 }
 .top-nav {
 	background-color: $spring-wood;
-}
-.top-nav__item {
-	padding: 10px 0px;
-	border-bottom: 1px solid $alto;
 
-	&:last-child {
-		border-bottom: none;
+	&__item {
+		padding: 10px 0px;
+		border-bottom: 1px solid $alto;
+
+		&:last-child {
+			border-bottom: none;
+		}
 	}
-}
-.top-nav__link:hover {
-	color: $dusty-gray;
+
+	&__link:hover {
+		color: $dusty-gray;
+	}
 }
 .pull {
 	display: none;
@@ -68,13 +65,14 @@ ul {
 }
 .nav-icon {
 	padding-top: 4px;
-}
-.nav-icon__btn {
-	color: #231f20;
-	font-size: 25px;
 
-	&:hover {
+	&__btn {
+		color: #231f20;
+		font-size: 25px;
+
+		&:hover {
 		color: $gold;
+		}
 	}
 }
 .logo {
@@ -104,17 +102,19 @@ ul {
 .login {
 	font-size: 28px;
 	line-height: 1.5;
-}
-.login__link {
-	color: #231f20;
-	transition: all 0.5s;
-		-moz-transition: all 0.5s;
-		-wabkit-transition: all 0.5s;
-		-o-transition: all 0.5s;
-}
-.login__link:hover {
-	color: $gold;
-	cursor: pointer;
+
+	&__link {
+		color: #231f20;
+		transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-o-transition: all 0.5s;
+
+			&:hover {
+				color: $gold;
+				cursor: pointer;
+			}
+		}
 }
 
 .main-screen {
@@ -466,4 +466,10 @@ footer {
 }
 .margin-r {
 	margin-right: 0px;
+}
+
+.animated {
+  animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
+  	-moz-animation-duration: 2.5s;
 }

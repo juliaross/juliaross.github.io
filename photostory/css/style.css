@@ -1,4 +1,3 @@
-/* @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"); */
 * {
   padding: 0px;
   margin: 0px;
@@ -11,9 +10,6 @@ html {
 body {
   font-family: 'Krub', sans-serif;
   height: 100%; }
-
-header {
-  /* height: 100%; */ }
 
 a {
   transition: all 0.5s;
@@ -33,15 +29,13 @@ ul {
 
 .top-nav {
   background-color: #f3f0e7; }
-
-.top-nav__item {
-  padding: 10px 0px;
-  border-bottom: 1px solid #dfdfdf; }
-  .top-nav__item:last-child {
-    border-bottom: none; }
-
-.top-nav__link:hover {
-  color: #969696; }
+  .top-nav__item {
+    padding: 10px 0px;
+    border-bottom: 1px solid #dfdfdf; }
+    .top-nav__item:last-child {
+      border-bottom: none; }
+  .top-nav__link:hover {
+    color: #969696; }
 
 .pull {
   display: none; }
@@ -53,12 +47,11 @@ ul {
 
 .nav-icon {
   padding-top: 4px; }
-
-.nav-icon__btn {
-  color: #231f20;
-  font-size: 25px; }
-  .nav-icon__btn:hover {
-    color: #ffd200; }
+  .nav-icon__btn {
+    color: #231f20;
+    font-size: 25px; }
+    .nav-icon__btn:hover {
+      color: #ffd200; }
 
 .logo {
   padding-top: 10px;
@@ -85,17 +78,15 @@ ul {
 .login {
   font-size: 28px;
   line-height: 1.5; }
-
-.login__link {
-  color: #231f20;
-  transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -wabkit-transition: all 0.5s;
-  -o-transition: all 0.5s; }
-
-.login__link:hover {
-  color: #ffd200;
-  cursor: pointer; }
+  .login__link {
+    color: #231f20;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s; }
+    .login__link:hover {
+      color: #ffd200;
+      cursor: pointer; }
 
 .main-screen {
   height: 100%;
@@ -401,5 +392,10 @@ footer {
 
 .margin-r {
   margin-right: 0px; }
+
+.animated {
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+  -moz-animation-duration: 2.5s; }
 
 /*# sourceMappingURL=style.css.map */
