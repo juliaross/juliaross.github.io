@@ -43,7 +43,7 @@ ul {
 	background-color: $spring-wood;
 
 	&__item {
-		padding: 10px 0px;
+		padding: 20px 0px;
 		border-bottom: 1px solid $alto;
 
 		&:last-child {
@@ -66,13 +66,35 @@ ul {
 .nav-icon {
 	padding-top: 4px;
 
-	&__btn {
-		color: #231f20;
-		font-size: 25px;
 
+	&__line {
+		height: 5px;
+  		width: 30px;
+  		background: #231f20;
+  		margin: 5px auto;
+  		transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	&__btn {
+		
 		&:hover {
-		color: $gold;
+			.nav-icon__line {
+				width: 32px;
+				margin: 6px auto 5px;
+				background: $gold;
+				transition: all 400ms
+			}
 		}
+  		&.active {
+		    .nav-icon__line:nth-child(1) {
+		      transform: rotate(45deg) translate(5px, 10px);
+		    }
+		    .nav-icon__line:nth-child(2) {
+		      visibility: hidden;
+		    }
+		    .nav-icon__line:nth-child(3) {
+		      transform: rotate(-45deg) translate(4px, -10px);
+		    }
+  		}
 	}
 }
 .logo {
@@ -110,11 +132,11 @@ ul {
 			-webkit-transition: all 0.5s;
 			-o-transition: all 0.5s;
 
-			&:hover {
-				color: $gold;
-				cursor: pointer;
-			}
+		&:hover {
+			color: $gold;
+			cursor: pointer;
 		}
+	}
 }
 
 .main-screen {
@@ -132,20 +154,27 @@ ul {
 		position: relative;
 	}
 	&__text {
-	position: absolute;
-	top: calc(50% - 30vh);
+		position: absolute;
+		top: calc(50% - 30vh);
+	}
+	&__title {
+		font-size: 60px;
+
+		@media only screen and (max-width: 350px) {
+			font-size: 50px;
+		}
+	}
+	&__description {
+		font-size: 22px;
+	}
+	&__btn {
+		border: 1px solid #000;
+
+		&:hover {
+			background-color: #f9dc56;
+		}	
 	}
 }	
-.main-screen__title {
-	font-size: 60px;
-
-	@media only screen and (max-width: 350px) {
-		font-size: 50px;
-	}
-}
-.main-screen__description {
-	font-size: 22px;
-}
 .btn {
 	display: inline-block;
 	border: 1px solid #000;
@@ -164,13 +193,6 @@ ul {
 		margin-top: 20px;
 	}
 }
-.main-screen__btn {
-	border: 1px solid #000;
-
-	&:hover {
-		background-color: #f9dc56;
-	}
-}
 
 .step {
 	margin: 50px 0px 90px 0px;
@@ -185,36 +207,37 @@ ul {
 .step-item {
 	position: relative;
 	z-index: 100;
-}
-.step-item__img {
-	border: 4px solid $energy-yellow;
-	border-radius: 50%;
-	width: 135px;
-	height: 135px;
-	background-color: #fff;
-	display: block;
-	margin: auto;
 
-	&.download {
-		background: url(../images/downoload.png) center center no-repeat;
+	&__img {
+		border: 4px solid $energy-yellow;
+		border-radius: 50%;
+		width: 135px;
+		height: 135px;
 		background-color: #fff;
+		display: block;
+		margin: auto;
+
+		&.download {
+			background: url(../images/downoload.png) center center no-repeat;
+			background-color: #fff;
+		}
+		&.design {
+			background: url(../images/design.png) center center no-repeat;
+			background-color: #fff;
+		}
+		&.pay {
+			background: url(../images/pay.png) center center no-repeat;
+			background-color: #fff;
+		}
+		&.get {
+			background: url(../images/get.png) center center no-repeat;
+			background-color: #fff;
+		}	
 	}
-	&.design {
-		background: url(../images/design.png) center center no-repeat;
-		background-color: #fff;
+	&__name {
+		margin-top: 25px;
+		font-size: 24px;
 	}
-	&.pay {
-		background: url(../images/pay.png) center center no-repeat;
-		background-color: #fff;
-	}
-	&.get {
-		background: url(../images/get.png) center center no-repeat;
-		background-color: #fff;
-	}
-}
-.step-item__name {
-	margin-top: 25px;
-	font-size: 24px;
 }
 .step-line {
 	border-top: 4px dashed $energy-yellow;
@@ -233,6 +256,16 @@ ul {
 	@media only screen and (max-width: 350px) {
 		margin-top: 0px;
 	}
+
+	&__btn {
+		border-color: $alizarin-crimson;
+		background-color: $alizarin-crimson;
+		color: #fff;
+
+		&:hover {
+			color: $white-linen;
+		}
+	}
 }
 .advantage-item {
 	margin-bottom: 20px;
@@ -240,6 +273,15 @@ ul {
 	& img {
 		display: block;
 		margin: 0 auto;
+	}
+	&__title {
+		display: inline-block;	
+		font-size: 24px;
+		margin-top: 23px;
+		margin-bottom: 25px;
+	}
+	&__description {
+		font-size: 16px;
 	}
 }
 .advantage-title {
@@ -251,24 +293,6 @@ ul {
 }
 .advantage-list {
 	margin-top: 65px;
-}
-.advantage-item__title {
-	display: inline-block;	
-	font-size: 24px;
-	margin-top: 23px;
-	margin-bottom: 25px;
-}
-.advantage-item__description {
-	font-size: 16px;
-}
-.advantage__btn {
-	border-color: $alizarin-crimson;
-	background-color: $alizarin-crimson;
-	color: #fff;
-
-	&:hover {
-		color: $white-linen;
-	}
 }
 .solution {
 	margin-bottom: 30px;
@@ -287,25 +311,25 @@ ul {
 	border-radius: 15px;
 	box-sizing: border-box;
 	margin: 0px 22px 50px 22px;
-}
-.solution-item__title {
-	font-size: 36px;
-	text-align: center;
-	padding: 45px 0px;
-}
-.solution-item__description {
-	background-color: #fff;
-	margin: 0px 5px;
-	padding: 20px; 
 
-	& ul {
-		height: 175px;
+	&__title {
+		font-size: 36px;
+		text-align: center;
+		padding: 45px 0px;
 	}
-	& li {
-		font-size: 18px;
-		margin-bottom: 10px;
-	}
-	& li:before {
+	&__description {
+		background-color: #fff;
+		margin: 0px 5px;
+		padding: 20px; 
+
+		& ul {
+			height: 175px;
+		}
+		& li {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		& li:before {
 			content: '';
 			display: block;
 			float: left;
@@ -314,17 +338,17 @@ ul {
 			height: 20px;
 			margin-right: 20px;
 			margin-top: 2px;
+		}
 	}
-}
-.solution-item__price {
-	font-size: 60px;
-	text-align: center;
-	/* margin-top: 20px; */
-}
-.solution-item__footer {
-	text-align: center;
-	font-size: 21px;
-	padding: 20px 17px 20px;
+	&__price {
+		font-size: 60px;
+		text-align: center;
+	}
+	&__footer {
+		text-align: center;
+		font-size: 21px;
+		padding: 20px 17px 20px;
+	}
 }
 .label {
 	background-color: $gold;
@@ -337,7 +361,6 @@ ul {
 	left:50%; 
 	margin-left:-80px;
 	padding: 10px 30px 20px 30px;
-	/* border-radius: 20px; */
 	clip-path: polygon(10% 0%, 90% 0, 100% 90%, 0 100%)	 
 }
 
@@ -379,25 +402,28 @@ ul {
 	& p {
 		text-align: justify;
 	}
-}
-@media screen and (max-device-width: 991px) {
-	.testimonials-description {width: 100%;}
-	} 
 
-.testimonials-description__link {
-	float: right;
+	&__link {
+		float: right;
+	
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	@media screen and (max-device-width: 991px) {
+	 	width: 100%;
+	} 
 }
-.testimonials-description__link:hover {
-	text-decoration: underline;
-}
+
+
 .testimonials-btn {
 	margin-top: 60px;
     display: inline-block;
+    
+    &:hover {
+    	background-color: #f9dc56;	
+    }
 }
-.testimonials-btn:hover {
-	background-color: #f9dc56;
-}
-
 .payment {
 	padding: 90px 0px 115px 0px;
 }
@@ -423,19 +449,18 @@ ul {
 		margin-left: 35px;
 	}
 }
-
-.important {
-	color: $alizarin-crimson;
-	font-weight: bold;
-}
 .payment-btn {
 	background-color: $alizarin-crimson;
 	color: #fff;
 	border-color: $alizarin-crimson;
-}
 
-.payment-btn:hover {
-	color: $white-linen;
+	&:hover {
+		color: $white-linen;
+	}
+}
+.important {
+	color: $alizarin-crimson;
+	font-weight: bold;
 }
 
 footer {
@@ -473,3 +498,9 @@ footer {
     -webkit-animation-duration: 2.5s;
   	-moz-animation-duration: 2.5s;
 }
+
+
+
+
+
+
