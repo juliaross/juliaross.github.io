@@ -42,7 +42,7 @@ body {
   line-height: 2; }
   .link:hover {
     cursor: pointer;
-    color: #25786b;
+    color: #af6d82;
     transition: all 500ms; }
 
 .title {
@@ -58,19 +58,24 @@ body {
       width: 100%; } }
 
 .item {
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 30px;
-  border-bottom: 4px solid #25786b; }
+  border-bottom: 4px solid #7a5c65; }
   .item:hover {
-    border-bottom: 4px solid #3dc9b3;
+    border-bottom: 4px solid #af6d82;
     transition: all 600ms; }
   .item__link {
     display: block;
     text-decoration: none;
     color: #cacaca;
     line-height: 1.5; }
+  .item__title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
   .item__description {
     color: #cacaca;
     margin: 0;
-    padding: 5px 0px 20px; }
+    padding-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,8 @@ $mine-shaft: #333333;
 $silver: #cacaca;
 $eucalyptus: #25786b;
 $puerto-rico: #3dc9b3;
+$turkish-rose: #af6d82;
+$falcon: #7a5c65;
 
 
 html {
@@ -54,7 +56,7 @@ body {
 	line-height: 2;
 	&:hover {
 		cursor: pointer;
-		color: $eucalyptus;
+		color: $turkish-rose;
 		transition: all 500ms;
 	}
 }
@@ -72,11 +74,12 @@ body {
 	} 
 }
 .item {
+	font-family: 'Raleway', sans-serif;
 	margin-bottom: 30px;
-	border-bottom: 4px solid $eucalyptus;
+	border-bottom: 4px solid $falcon;
 
 		&:hover {
-			border-bottom: 4px solid $puerto-rico;
+			border-bottom: 4px solid $turkish-rose;
 			transition: all 600ms;
 		}
 		&__link {
@@ -85,10 +88,15 @@ body {
 			color: $silver;
 			line-height: 1.5;
 		}
+		&__title {
+			font-size: 24px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
 		&__description {
 			color: $silver;
 			margin: 0;
-			padding: 5px 0px 20px;
+			padding-bottom: 20px;
 		}
 }
 
