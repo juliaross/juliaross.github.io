@@ -36,13 +36,15 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
+  .works--left {
+    width: 36%; }
 
 .item {
   * transition: all .5s ease; }
   .item__wrapper {
     position: relative;
     overflow: hidden;
-    margin: 5px;
+    margin: 0px 0px 10px 10px;
     background: #111;
     font-size: 1em;
     text-align: center;
@@ -54,30 +56,31 @@ a {
       opacity: 1;
       -webkit-transform: scale(1);
       transform: scale(1); }
-    .item__wrapper:hover .item__title, .item__wrapper:hover .item__description {
+    .item__wrapper:hover .item__title, .item__wrapper:hover .tags, .item__wrapper:hover .item__description {
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
   .item__img {
     display: block;
-    max-width: 100%;
     position: absolute;
     opacity: 0.9;
     transition: opacity 0.35s;
     width: 100%;
-    height: auto;
+    height: 100%;
     z-index: 1; }
   .item__text {
     padding: 1.5em;
+    height: 200px;
     color: #fff;
-    text-transform: uppercase;
     font-size: 1.25em;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: relative;
-    z-index: 10; }
+    z-index: 10;
+    box-sizing: border-box; }
     .item__text--left {
-      padding: 6.9em 2em; }
+      padding: 5em 1em;
+      height: 410px; }
     .item__text::before, .item__text::after {
       position: absolute;
       top: 10px;
@@ -105,18 +108,38 @@ a {
   .item__title {
     font-weight: 400;
     padding-top: 10%;
+    text-transform: uppercase;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0); }
   .item__description {
     padding: 10px 2.5em;
+    text-transform: uppercase;
     opacity: 0;
     font-family: 'Open Sans Condensed', sans-serif;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: translate3d(0, 20px, 0);
     transform: translate3d(0, 20px, 0); }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0); }
+  .tags__item {
+    margin: 2px 5px 5px 0;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border: 1px solid #d2dae2;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 11px; }
 
 .social {
   height: 220px;

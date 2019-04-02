@@ -40,7 +40,7 @@ a {
 	justify-content: center;
 	flex-wrap: wrap;
 	&--left {
-		
+		width: 36%;
 	}
 }
 .item {
@@ -48,7 +48,7 @@ a {
 	&__wrapper {
 		position: relative;
 	    overflow: hidden;
-	    margin: 5px; 
+	    margin: 0px 0px 10px 10px; 
 	    background: #111;
 	    font-size: 1em;
 	    text-align: center;
@@ -64,6 +64,7 @@ a {
 			transform: scale(1);
 		}
 		&:hover .item__title,
+		&:hover .tags,
 		&:hover .item__description {
 			opacity: 1;
 			-webkit-transform: translate3d(0, 0, 0);
@@ -72,25 +73,26 @@ a {
 	}
 	&__img {
 		display: block;
-		max-width: 100%;
 		position: absolute;
 		opacity: 0.9;
 		transition: opacity 0.35s;
 		width: 100%;
-		height: auto;
+		height: 100%;
 		z-index: 1;
 	}
 	&__text {
 		padding: 1.5em;
+		height: 200px;
 	    color: #fff;
-	    text-transform: uppercase;
 	    font-size: 1.25em;
 	    -webkit-backface-visibility: hidden;
 	    backface-visibility: hidden;
 	    position: relative;
 	    z-index: 10;
+	    box-sizing: border-box;
 	    &--left {
-	    	padding: 6.9em 2em;
+	    	padding: 5em 1em;
+	    	height: 410px;
 	    }
 	    &::before,
 	    &::after {
@@ -126,6 +128,7 @@ a {
 	&__title {
 		font-weight: 400;
 		padding-top: 10%;
+		text-transform: uppercase;
 		-webkit-transition: -webkit-transform 0.35s;
 		transition: transform 0.35s;
 		-webkit-transform: translate3d(0, -20px, 0);
@@ -133,6 +136,7 @@ a {
 	}
 	&__description {
 		padding: 10px 2.5em;
+		text-transform: uppercase;
 	    opacity: 0;
 	    font-family: 'Open Sans Condensed', sans-serif;
 	    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -142,6 +146,25 @@ a {
 	}
 }
 
+.tags {
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0, 20px, 0);
+	transform: translate3d(0, 20px, 0);
+	&__item {
+		margin: 2px 5px 5px 0;
+    	box-sizing: border-box;
+		padding: 1px 6px;
+		border: 1px solid #d2dae2;
+		border-radius: 5px;
+		white-space: nowrap;
+		font-size: 11px;
+	}
+}
 
 .social {
 	height: 220px;
@@ -181,6 +204,7 @@ a {
 }
 
 
+
 @media only screen and (max-width: 774px) {
 		.works--right,
 		.works--left  {
@@ -213,6 +237,7 @@ a {
 	    	padding: 4em 2em;
 	    }
 }
+
 
 
 
