@@ -94,6 +94,9 @@ a {
 	    	padding: 5em 1em;
 	    	height: 410px;
 	    }
+	    &--third {
+	    	height: 410px;
+	    }
 	    &::before,
 	    &::after {
 	    	position: absolute;
@@ -207,7 +210,8 @@ a {
 
 @media only screen and (max-width: 774px) {
 		.works--right,
-		.works--left  {
+		.works--left,
+		.works--third  {
 			width: 65%;
 		}
 		.works__item {
@@ -216,13 +220,15 @@ a {
 }
 @media only screen and (max-width: 550px) {
 		.works--right,
-		.works--left  {
+		.works--left,
+		.works--third  {
 			width: 85%;
 		}
 }
 @media only screen and (max-width: 410px) {
 		.works--right,
-		.works--left  {
+		.works--left,
+		.works--third  {
 			width: 100%;
 		}
 		.social {

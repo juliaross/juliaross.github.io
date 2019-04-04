@@ -81,6 +81,8 @@ a {
     .item__text--left {
       padding: 5em 1em;
       height: 410px; }
+    .item__text--third {
+      height: 410px; }
     .item__text::before, .item__text::after {
       position: absolute;
       top: 10px;
@@ -171,18 +173,21 @@ a {
 
 @media only screen and (max-width: 774px) {
   .works--right,
-  .works--left {
+  .works--left,
+  .works--third {
     width: 65%; }
 
   .works__item {
     margin-bottom: 20px; } }
 @media only screen and (max-width: 550px) {
   .works--right,
-  .works--left {
+  .works--left,
+  .works--third {
     width: 85%; } }
 @media only screen and (max-width: 410px) {
   .works--right,
-  .works--left {
+  .works--left,
+  .works--third {
     width: 100%; }
 
   .social {

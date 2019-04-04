@@ -1,0 +1,180 @@
+@media only screen and (max-width: 800px) {
+	.header {
+		&__basket {
+			padding-top: 1px;
+			margin-right: 10px;
+		}
+		&__logo {
+			margin-top: -15px;
+		}
+		&__nav {
+			.nav__item {
+				&:hover {
+				border-radius: 8px 8px 0 0;
+				}
+			}
+		}
+	}
+	.nav {
+		margin-right: 10px;
+		&__item {
+			padding: 8px 8px 8px 0;
+		}
+		&__link {
+			margin-left: 8px;
+			font-size: 13px;
+		}
+	}
+	.dropdown {
+		border-radius: 0px 8px 8px 8px;
+		top: 30px;
+		&__link {
+			font-size: 13px;
+		}
+	}
+	.bx-wrapper {
+		.bx-controls-direction a {
+			width: 25px;
+			height: 25px;
+		}
+	}	
+	.slider {
+		&__text {
+			margin-top: -66px;
+			margin-left: -185px;
+		}
+		&__title {
+			font-size: 30px;
+			margin-bottom: 15px;
+		}
+		&__description {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+	}
+	.button {
+		padding: 8px 20px 8px;
+	}
+	.categories {
+		&__list {
+			flex-wrap: wrap;
+		}
+		&__item {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-right: 29px;
+			}
+		}
+	}
+	.product {
+		&__list {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item {
+			margin-bottom: 10px;
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.header {
+		&__logo {
+			width: 100px;
+			img {
+				width: 100%;
+			}
+			margin-top: -7px;
+		}
+		&__basket {
+			width: 20px;
+			height: 20px;
+			padding-top: 4px;
+		}
+	}
+	.slider {
+		&__text {
+			margin-top: -50px;
+			margin-left: -130px;
+		}
+		&__title {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		&__description {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+	}
+	.button {
+		border-radius: 5px;
+		padding: 5px 12px 5px;
+		font-size: 10px;
+	}
+	.categories {
+		padding: 35px 5px 30px 5px;
+		&__list {
+			margin-top: 35px;
+		}
+		&__item {
+			margin-right: 0px;
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+	}
+	.product {
+		padding-top: 35px;
+		&__list {
+			margin-top: 35px;
+		}
+		&-item {
+			&__select::after {
+				margin-left: 10px;
+			}
+		}
+	}	
+}	
+@media only screen and (max-width: 450px) {
+	h2 {
+		font-size: 20px;
+	}
+	.header {
+		margin: 5px auto 0px;
+		&__logo {
+			width: 60px;
+			margin-top: -5px;
+		}
+		&__nav {
+			.nav__item {
+				padding: 0px 5px 3px 0;
+				&:hover {
+					border-radius: 4px 4px 0 0;
+				}
+			}
+			.nav__link {
+				margin-left: 6px;
+				font-size: 10px;
+			}
+			.dropdown {
+				top: 17px;
+				padding: 3px 7px;
+				&__link {
+					font-size: 10px;
+				}
+			}
+		}
+		&__basket {
+			display: none;
+		}
+	}
+	.slider__text {
+		margin-top: -30px;
+	}
+	.footer__nav {
+		.nav__list {
+			flex-wrap: wrap;
+			flex-direction: column;
+			text-align: right;
+		}
+	}
+}
