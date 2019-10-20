@@ -5,16 +5,16 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 100vh; }
+  overflow: hidden;
+  height: 100vh;
+  color: #202124; }
 
 h1 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 130px;
   padding-left: 30px;
-  color: #000; }
+  color: #202124; }
   @media (max-width: 768px) {
     h1 {
       font-size: 80px; } }
@@ -35,7 +35,7 @@ h2 {
       margin-bottom: 15px; } }
 
 a {
-  color: #000;
+  color: #202124;
   text-decoration: none; }
 
 p {
@@ -67,7 +67,7 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #eeeeee;
   background-image: url(../images/6.png);
   background-size: cover;
   background-attachment: fixed; }
@@ -175,7 +175,7 @@ p {
           left: 0;
           top: 0; } }
   .item.two {
-    background-color: #323232;
+    background-color: #000a12;
     right: 0;
     top: 100vh; }
     .item.two.active {
@@ -192,9 +192,10 @@ p {
           top: auto; } }
   .item__wrap {
     width: 400px;
+    height: 430px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #fbfbfb;
+    background-color: #eeeeee;
     padding: 60px 50px;
     cursor: pointer;
     -webkit-transition: all 0.2s ease;
@@ -232,7 +233,7 @@ p {
     overflow: hidden; }
 
 .menu {
-  background-color: #282e33;
+  background-color: #000a12;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #ffffff;
