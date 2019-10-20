@@ -204,6 +204,7 @@ p {
     @media (max-width: 768px) {
       .item__wrap {
         width: 300px;
+        height: auto;
         padding: 30px 20px; } }
     @media (max-width: 420px) {
       .item__wrap {
