@@ -116,7 +116,19 @@ input, button, textarea, select {
     font-weight: 400;
     margin-bottom: 20px;
     z-index: 10;
-    position: relative; }
+    position: relative;
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    .main_title.active {
+      -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+      opacity: 1; }
     @media (max-width: 768px) {
       .main_title {
         font-size: 50px; } }
@@ -131,7 +143,19 @@ input, button, textarea, select {
     font-weight: 700;
     opacity: 0.7;
     display: block;
-    margin-bottom: 60px; }
+    margin-bottom: 60px;
+    -webkit-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    transform: translateY(15px);
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    .main_description.active {
+      -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      transform: translateY(0px);
+      opacity: 1; }
     @media (max-width: 480px) {
       .main_description {
         margin-bottom: 30px;
@@ -144,7 +168,13 @@ input, button, textarea, select {
     background-image: url(../images/arrow.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transition: all 1s ease 0.5s;
+    -o-transition: all 1s ease 0.5s;
+    transition: all 1s ease 0.5s; }
+    .main_arrow.active {
+      opacity: 1; }
     @media (max-width: 480px) {
       .main_arrow {
         width: 20px;
