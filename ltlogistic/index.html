@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LT logistic</title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+
+<!--[if lte IE 9]><script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script><![endif]-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="https://aishek.github.io/jquery-animateNumber/javascripts/jquery.animateNumber.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" integrity="sha256-VijNzkE1B0xxQ4Y8t3TeZVrOhKBbS7JLwgCZ0nOzTJE=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+
+<div class="menu">
+  <div class="nav-icon">
+    <div class="nav-icon_line"></div>
+    <div class="nav-icon_line"></div>
+    <div class="nav-icon_line"></div>
+  </div>
+  <nav class="nav">
+    <ul class="nav_list">
+      <li class="nav_item">
+        <a href="#" class="nav_link">
+          <span class="services-icon"></span> Услуги
+        </a>
+      </li>
+      <li class="nav_item">
+        <a href="#" class="nav_link">
+          <span class="about-icon"></span>О компании
+        </a>
+      </li>
+      <li class="nav_item">
+        <a href="#" class="nav_link">
+          <span class="news-icon"></span>Новости
+        </a>
+      </li>
+      <li class="nav_item">
+        <a href="#" class="nav_link">
+          <span class="info-icon"></span>Информация
+        </a>
+      </li>
+      <li class="nav_item">
+        <a href="#" class="nav_link">
+          <span class="vacancies-icon"></span>Вакансии
+        </a>
+      </li>
+      <li class="nav_item">
+        <a href="#" class="nav_link">
+          <span class="contacts-icon"></span>Контакты</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="social-icon">
+    <a href="#" class="social-icon_item fb"></a>
+    <a href="#" class="social-icon_item vk"></a>
+    <a href="#" class="social-icon_item inst"></a>
+  </div>
+</div>
+
+<header class="header">
+  <a href="/" class="h-logo">
+    <img src="images/logo.svg" alt="">
+  </a>
+
+  <div class="h-contacts">
+    <div class="h-contacts_item">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.00313 0H7.99687C4.62125 0 1.875 2.74625 1.875 6.12187C1.875 7.43344 2.30725 8.73444 3.09206 9.78522L7.73378 16H8.26619L12.9079 9.78525C13.6927 8.73444 14.125 7.43344 14.125 6.12187C14.125 2.74625 11.3787 0 8.00313 0ZM8 7.84375C6.96613 7.84375 6.125 7.00262 6.125 5.96875C6.125 4.93488 6.96613 4.09375 8 4.09375C9.03387 4.09375 9.875 4.93488 9.875 5.96875C9.875 7.00262 9.03387 7.84375 8 7.84375Z"/>
+      </svg>
+      <span>Москва, м. Тульская</span>
+    </div>
+    <div class="h-contacts_item">
+      <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.6097 6L16 10.4675V1.53281L10.6097 6ZM0.637812 0.84375L6.29406 5.53125H9.70594L15.3625 0.84375H0.637812ZM9.70594 6.46875H6.29406L0.637812 11.1562H15.3622L9.70594 6.46875ZM0 1.53281V10.4672L5.39031 6L0 1.53281Z" fill="#FF0014"/>
+      </svg>
+      <a href="mailto:bzllllouiio@yandex.ru">bzllllouiio@yandex.ru</a>
+    </div>
+    <div class="h-contacts_item">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.2129 0L0.638984 1.56082C-0.0645495 2.26424 -0.138933 3.24089 0.182216 4.23131C0.73808 5.94577 1.32249 7.29208 3.99967 9.96865C6.67678 12.6453 8.09517 13.0787 9.76179 13.7657C10.1455 13.9238 10.5079 14 10.8475 14C11.4511 14 11.9826 13.7591 12.4328 13.3089L14.0001 11.7355L9.97362 7.7032L7.89729 9.73333C7.34684 9.33062 6.72341 8.79094 5.95018 8.0179C5.16806 7.23596 4.57203 6.57193 4.1219 5.97949L6.13748 3.94735L2.2129 0Z" fill="#FF0014"/>
+      </svg>
+      <a href="tel:88006001717">8 (800) 600-17-17</a>
+    </div>
+
+    <button class="btn-red open-callback">заказать звонок</button>
+  </div>
+</header>
+
+
+
+<section class="main-screen">
+  <div class="main-video">
+    <!-- <video loop="loop" autoplay="" muted="">
+      <source src="video/main.mp4" type="video/mp4" />
+    </video> -->
+    <img src="images/main-screen_mobile.png" alt="">
+  </div>
+
+
+  <div class="main-screen_wrap content-wrap">
+    <div class="main-screen_text">
+      <h1 class="main-screen_title">Высококлассный сервис по перевозке грузов</h1>
+
+      <div class="numbers">
+        <div class="number-item">
+          <div class="number-item_title" data-count="25000">25 000</div>
+          <span class="number-item_subtitle">тонн грузов в год</span>
+        </div>
+        <div class="number-item">
+          <div class="number-item_title" data-count="1500">1 500</div>
+          <span class="number-item_subtitle">единиц техники</span>
+        </div>
+        <div class="number-item">
+          <div class="number-item_title" data-count="7000">7 000</div>
+          <span class="number-item_subtitle">заказов в год</span>
+        </div>
+        <div class="number-item">
+          <div class="number-item_title" data-count="5000">5 000</div>
+          <span class="number-item_subtitle">Палетт в месяц</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="services content-wrap">
+  <div class="services_list">
+    <div class="services-item block-nav fade-in">
+      <span class="block-nav_title">Услуги</span>
+      <a href="#" class="block-nav_link">все услуги</a>
+    </div>
+    <a href="#" class="services-item fade-in">
+      <div class="services-item_img">
+        <img src="images/services_01.png" alt="">
+      </div>
+      <div class="services-item_icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M48.9375 30.125V0H15.0625V30.125H0V64H64V30.125H48.9375ZM50.4679 33.875V40.6856H43.6572V33.875H50.4679ZM28.5946 3.75H35.4054V10.5606H28.5946V3.75ZM18.8125 3.75H24.8446V14.3106H39.1554V3.75H45.1875V30.125H18.8125V3.75ZM13.5323 33.875H20.3429V40.6856H13.5323V33.875ZM30.125 60.25H3.75V33.875H9.78213V44.4356H24.0928V33.875H30.125V60.25ZM60.25 60.25H33.875V33.875H39.9072V44.4356H54.2179V33.875H60.25V60.25Z"/>
+        </svg>
+      </div>
+      <span class="services-item_title">Сборные грузы</span>
+    </a>
+    <a href="#" class="services-item fade-in">
+      <div class="services-item_img">
+        <img src="images/services_01.png" alt="">
+      </div>
+      <div class="services-item_icon">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M52.5614 20.75C51.6904 16.476 47.9025 13.25 43.375 13.25H41.5V9.5H0V50.75H7.8225C8.5965 52.9323 10.6806 54.5 13.125 54.5C15.5694 54.5 17.6535 52.9323 18.4275 50.75H45.5726C46.3466 52.9323 48.4308 54.5 50.8751 54.5C53.3195 54.5 55.4036 52.9323 56.1776 50.75H64V33.5708L59.7265 20.75H52.5614ZM59.5236 32H49V24.5H57.0235L59.5236 32ZM43.375 17C45.8194 17 47.9035 18.5677 48.6775 20.75H41.5V17H43.375ZM37.75 13.25V39.5H3.75V13.25H37.75ZM13.125 50.75C12.0911 50.75 11.25 49.9089 11.25 48.875C11.25 47.8411 12.0911 47 13.125 47C14.1589 47 15 47.8411 15 48.875C15 49.9089 14.1589 50.75 13.125 50.75ZM18.4275 47C17.6535 44.8177 15.5694 43.25 13.125 43.25C10.6806 43.25 8.5965 44.8177 7.8225 47H3.75V43.25L37.75 43.2487V47H18.4275ZM50.875 50.75C49.8411 50.75 49 49.9089 49 48.875C49 47.8411 49.8411 47 50.875 47C51.9089 47 52.75 47.8411 52.75 48.875C52.75 49.9089 51.9089 50.75 50.875 50.75ZM56.1775 47C55.4035 44.8177 53.3194 43.25 50.875 43.25C48.4306 43.25 46.3465 44.8177 45.5725 47H41.5V24.5H45.25V35.75H60.25V39.5H56.5V43.25H60.25V47H56.1775Z"/>
+      </svg>
+      </div>
+      <span class="services-item_title">Автомобильные перевозки</span>
+    </a>
+    <a href="#" class="services-item fade-in">
+      <div class="services-item_img">
+        <img src="images/services_03.png" alt="">
+      </div>
+      <div class="services-item_icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.5149 30.8545C5.1656 30.8545 0 36.0201 0 42.3696C0 45.5795 1.75516 49.4566 5.21685 53.893C7.68929 57.0616 10.1327 59.3529 10.2356 59.4489L11.5151 60.6435L12.7945 59.4489C12.8974 59.3529 15.3408 57.0616 17.8133 53.893C21.2748 49.4566 23.0301 45.5795 23.0301 42.3696C23.03 36.0201 17.8644 30.8545 11.5149 30.8545ZM11.5202 55.4351C10.6372 54.5162 9.40308 53.163 8.17285 51.5864C5.27909 47.8776 3.74953 44.6904 3.74953 42.3696C3.74953 38.0877 7.2331 34.6041 11.5149 34.6041C15.7968 34.6041 19.2805 38.0876 19.2805 42.3696C19.2805 46.5075 14.4746 52.3676 11.5202 55.4351Z"/>
+        <path d="M11.5153 38.6445C9.4612 38.6445 7.79004 40.3157 7.79004 42.3698C7.79004 44.4239 9.4612 46.0951 11.5153 46.0951C13.5694 46.0951 15.2406 44.4239 15.2406 42.3698C15.2406 40.3157 13.5694 38.6445 11.5153 38.6445Z"/>
+        <path d="M52.4847 3.35645C46.1353 3.35645 40.9697 8.52205 40.9697 14.8714C40.9697 18.0814 42.7249 21.9584 46.1865 26.3948C48.6588 29.5634 51.1023 31.8548 51.2051 31.9507L52.4845 33.1453L53.7639 31.9507C53.8667 31.8548 56.3103 29.5634 58.7826 26.3948C62.2443 21.9584 63.9995 18.0814 63.9995 14.8714C63.9997 8.52217 58.8341 3.35645 52.4847 3.35645ZM52.4847 27.9424C49.5308 24.8764 44.7193 19.0117 44.7193 14.8714C44.7193 10.5895 48.2028 7.10598 52.4847 7.10598C56.7666 7.10598 60.2502 10.5895 60.2502 14.8714C60.2502 19.0119 55.4387 24.8764 52.4847 27.9424Z"/>
+        <path d="M52.485 11.1465C50.4309 11.1465 48.7598 12.8177 48.7598 14.8718C48.7598 16.9259 50.4309 18.5971 52.485 18.5971C54.5393 18.5971 56.2105 16.9259 56.2105 14.8718C56.2105 12.8177 54.5393 11.1465 52.485 11.1465Z"/>
+        <path d="M45.6106 42.4551H35.1249C32.3679 42.4551 30.125 40.2122 30.125 37.4553C30.125 34.6984 32.3679 32.4556 35.1249 32.4556H44.9855V28.7061H35.1249C30.3005 28.7061 26.3755 32.6309 26.3755 37.4553C26.3755 42.2797 30.3005 46.2046 35.1249 46.2046H45.6106C48.3675 46.2046 50.6103 48.4475 50.6103 51.2044C50.6103 53.9613 48.3675 56.2041 45.6106 56.2041H19.0146V59.9536H45.6106C50.435 59.9536 54.3599 56.0288 54.3599 51.2044C54.3599 46.38 50.435 42.4551 45.6106 42.4551Z"/>
+        </svg>
+      </div>
+      <span class="services-item_title">Проектная логистика</span>
+    </a>
+    <a href="#" class="services-item fade-in">
+      <div class="services-item_img">
+        <img src="images/services_04.png" alt="">
+      </div>
+      <div class="services-item_icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)">
+        <path d="M64 47.534V43.7845H59.8429C59.8755 43.732 59.9084 43.6798 59.94 43.6263C61.3894 41.1795 61.4388 38.2297 60.0722 35.7356L53.6829 24.0747C48.5768 14.756 38.8037 8.9668 28.1777 8.9668H0V12.7163H25.0529V30.1252H52.7226L55.2632 34.7619H52.2931V38.5114H57.1711C57.4521 39.5843 57.2993 40.7271 56.714 41.7155C55.9465 43.0111 54.5894 43.7846 53.0836 43.7846H35.4658L29.8768 39.9127C25.3559 36.7807 20.0593 35.1253 14.5597 35.1253H0.00787403V38.8749H14.56C19.2929 38.8749 23.8512 40.2994 27.7418 42.9949L28.8818 43.7846H0V47.5342H3.87677V51.2842H0V55.0338H64V51.2842H60.1232V47.5342H64V47.534ZM28.8025 26.3757V12.725C37.8155 12.9463 46.047 17.9422 50.3947 25.8766L50.6681 26.3757H28.8025ZM25.1252 47.534H30.1252V51.2841H25.1252V47.534ZM21.3756 51.2841H16.3757V47.534H21.3756V51.2841ZM33.8747 47.534H38.8747V51.2841H33.8747V47.534ZM42.6243 47.534H47.6241V51.2841H42.6243V47.534ZM7.62631 47.534H12.6263V51.2841H7.62631V47.534ZM56.3737 47.534V51.2841H51.3737V47.534H56.3737Z"/>
+        <path d="M15.0535 26.3761H0.00787403V30.1256H18.8031V16.4668H0V20.2163H15.0535V26.3761Z"/>
+        </g>
+        <defs>
+        <clipPath id="clip0">
+        <rect width="64" height="64" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+      </div>
+      <span class="services-item_title">ЖД перевозки</span>
+    </a>
+    <a href="#" class="services-item fade-in">
+      <div class="services-item_img">
+        <img src="images/services_05.png" alt="">
+      </div>
+      <div class="services-item_icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.667 40.3496H19.4175V44.1001H15.667V40.3496Z"/>
+        <path d="M23.1689 40.3496H26.9194V44.1001H23.1689V40.3496Z"/>
+        <path d="M30.6699 40.3496H34.4204V44.1001H30.6699V40.3496Z"/>
+        <path d="M38.1709 40.3496H41.9214V44.1001H38.1709V40.3496Z"/>
+        <path d="M45.6729 40.3496H49.4229V44.1001H45.6729V40.3496Z"/>
+        <path d="M63.9999 18.2212H53.517V12.2505H55.4672V8.5H47.8158V12.2505H49.7665V18.2212H39.2831V29.3911L38.2148 32.5483H33.1562V22.8608H27.7929V13.1728H13.3159V22.8608H7.95262V32.5483H0L7.08592 47.8124C5.29345 48.1537 3.59325 48.9267 2.15869 50.0756L4.50341 53.0028C7.2534 50.8002 11.0947 50.8002 13.8447 53.0028C15.8276 54.5912 18.3188 55.4662 20.8598 55.4662C23.4003 55.4662 25.892 54.5912 27.8749 53.0028C30.6249 50.8002 34.4658 50.8002 37.2157 53.0028C39.1987 54.5912 41.6899 55.4662 44.2309 55.4662C46.7719 55.4662 49.2631 54.5912 51.246 53.0028C53.996 50.8002 57.8373 50.8002 60.5868 53.0028L62.9315 50.0756C62.0228 49.3476 61.0062 48.7714 59.9276 48.3588L63.9999 29.9043V18.2212ZM60.2494 21.9712V27.8242H43.0336V21.9712H60.2494ZM29.4057 32.5483H22.4296V26.6108H29.4057V32.5483ZM17.0664 22.8603V16.9233H24.0424V22.8603H17.0664ZM11.7031 26.6108H18.6792V32.5483H11.7031V26.6108ZM55.9164 47.6122C53.3759 47.6122 50.8842 48.4872 48.9013 50.0756C46.1513 52.2787 42.3105 52.2787 39.5605 50.0756C37.5776 48.4872 35.0864 47.6122 32.5453 47.6122C30.0048 47.6122 27.5131 48.4872 25.5302 50.0756C22.7802 52.2787 18.9389 52.2787 16.1894 50.0756C14.7431 48.9169 13.0259 48.1405 11.2168 47.8036L5.87597 36.2988H40.9057L42.5038 31.5747H59.7909L56.2504 47.6196C56.1386 47.6161 56.0277 47.6122 55.9164 47.6122Z"/>
+        </svg>
+      </div>
+      <span class="services-item_title">Морские перевозки</span>
+    </a>
+    <a href="#" class="services-item fade-in">
+      <div class="services-item_img">
+        <img src="images/services_06.png" alt="">
+      </div>
+      <div class="services-item_icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49 17.5H15V21.25H49V17.5Z"/>
+        <path d="M49 25H15V28.75H49V25Z"/>
+        <path d="M49 37.75H39V41.5H49V37.75Z"/>
+        <path d="M55.4016 3.75H0V52.75H11.25V60.25H13.5642L16.875 59.1084L20.1857 60.25H22.5V52.75H64V12.3484L55.4016 3.75ZM18.75 55.7881L16.875 55.1416L15 55.7881V51.1862C15.606 51.3097 16.233 51.3749 16.875 51.3749C17.517 51.3749 18.144 51.3097 18.75 51.1862V55.7881ZM16.875 47.625C13.7734 47.625 11.25 45.1016 11.25 42C11.25 38.8984 13.7734 36.375 16.875 36.375C19.9766 36.375 22.5 38.8984 22.5 42C22.5 45.1016 19.9766 47.625 16.875 47.625ZM60.25 49H23.1021C25.0316 47.2816 26.25 44.781 26.25 42C26.25 36.8306 22.0444 32.625 16.875 32.625C11.7056 32.625 7.5 36.8306 7.5 42C7.5 44.781 8.71838 47.2816 10.6479 49H3.75V7.5H52.75V15H60.25V49Z"/>
+        </svg>
+      </div>
+      <span class="services-item_title">Сертификация и таможенное оформление</span>
+    </a>
+    <a href="#" class="services-item fade-in">
+      <div class="services-item_img">
+        <img src="images/services_07.png" alt="">
+      </div>
+      <div class="services-item_icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M31.9999 0L0.000976562 9.30175V64H63.9989V9.30175L31.9999 0ZM30.125 60.2501H18.7504V48.8755H22.5627V53.8809H26.3126V48.8755H30.125V60.2501ZM33.8747 38.7564V33.751H37.6871V45.1256H26.3125V33.751H30.1249V38.7564H33.8747ZM45.2494 60.2501H33.8747V48.8755H37.6871V53.8809H41.437V48.8755H45.2494V60.2501ZM52.7491 60.2501H48.9992V45.1256H41.437V30.0011H22.5627V45.1256H15.0005V60.2501H11.2506V26.2453H52.7492V60.2501H52.7491ZM60.2489 60.2501H56.499V22.4954H7.50073V60.2501H3.75085V12.1169L31.9999 3.90525L60.2489 12.1169V60.2501Z"/>
+        <path d="M56.5009 14.9893H7.5V18.7391H56.5009V14.9893Z"/>
+        </svg>
+      </div>
+      <span class="services-item_title">Склад</span>
+    </a>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="advantages_wrap content-wrap">
+    <div class="advantages-item">
+      <div class="advantages-item_icon">
+        <img src="images/icon_01.svg" alt="">
+      </div>
+      <div class="advantages-item_text">
+        Транспортировка грузов с поддержанием температурного режима
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="advantages-item_icon">
+        <img src="images/icon_02.svg" alt="">
+      </div>
+      <div class="advantages-item_text">
+        Передача логистики предприятия в доверительное управление логистическому оператору.
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="advantages-item_icon">
+        <img src="images/icon_03.svg" alt="">
+      </div>
+      <div class="advantages-item_text">
+        Перевозка груза, с предостав лением транспортного средства (автомобиля / контейнера) для полной загрузки.
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="advantages-item_icon">
+        <img src="images/icon_04.svg" alt="">
+      </div>
+      <div class="advantages-item_text">
+        Перевозка нескольких партий груза в одном транспортном средстве (автомобиле / контейнере). Сборный груз.
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="advantages-item_icon">
+        <img src="images/icon_05.svg" alt="">
+      </div>
+      <div class="advantages-item_text">
+        Проектная логистика
+      </div>
+    </div>
+    <div class="advantages-item">
+      <div class="advantages-item_icon">
+        <img src="images/icon_06.svg" alt="">
+      </div>
+      <div class="advantages-item_text">
+        Перевозка нескольких партий груза в одном транспортном средстве (автомобиле / контейнере). Сборный груз.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="truck">
+  <div class="content-wrap">
+    <div class="truck_text">Многолетний опыт работы</div>
+    <div class="truck_img">
+      <!-- <img src="images/truck.svg" alt=""> -->
+      <svg width="898" height="211" viewBox="0 0 898 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M863.961 64.7988H832.32C831.397 64.7988 830.642 65.5495 830.642 66.4661V96.0708C830.643 97.1843 831.063 97.7202 831.886 97.7078L860.097 103.562L863.961 104.364C864.864 104.55 865.483 105.573 865.485 106.49L865.487 108.257H865.489V110.322L865.501 121.16C865.493 121.819 865.754 122.161 866.312 122.153L882.213 122.117C883.137 122.115 883.892 121.367 883.892 120.451V106.061L876.186 77.3035V77.1913L873.218 66.4661C872.974 65.5822 872.462 64.7988 871.54 64.7988H863.961Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M754.986 149.315H1.00012V1H754.986V149.315Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M751.747 146.095H4.24048V4.21973H751.747V146.095Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M782.442 30.7256H853.953C860.06 30.7256 868.631 36.1586 870.983 41.7575L878.024 58.5157L875.95 58.9168L889.353 105.229H891.151C892.546 105.234 893.241 105.834 893.197 107.065V142.891C893.197 144.592 891.797 145.942 890.087 145.942H857.721C854.513 139.835 845.606 136.75 837.973 136.75H782.442V30.7256Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M827.866 136.827V62.6688C827.866 61.6576 828.699 60.8301 829.716 60.8301H872.969C873.986 60.8301 874.539 61.6988 874.819 62.6688L887.407 106.336V144.104C887.407 145.115 886.574 145.942 885.556 145.942H857.547" fill="#F1F3F6"/>
+        <path d="M827.866 136.827V62.6688C827.866 61.6576 828.699 60.8301 829.716 60.8301H872.969C873.986 60.8301 874.539 61.6988 874.819 62.6688L887.407 106.336V144.104C887.407 145.115 886.574 145.942 885.556 145.942H857.547" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M857.719 145.942C862.525 154.094 865.106 167.488 865.479 185.839L857.719 145.942Z" fill="#F1F3F6"/>
+        <path d="M857.719 145.942C862.525 154.094 865.106 167.488 865.479 185.839" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M861.019 185.846C861.118 181.24 860.707 174.907 859.785 166.849C856.449 151.092 847.246 143.686 832.173 144.632C799.369 144.735 782.443 144.786 782.443 144.786V136.749" fill="#F1F3F6"/>
+        <path d="M861.019 185.846C861.118 181.24 860.707 174.907 859.785 166.849C856.449 151.092 847.246 143.686 832.173 144.632C799.369 144.735 782.443 144.786 782.443 144.786V136.749" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M890.154 150.87H892.17C894.613 150.87 896.612 152.856 896.612 155.282V156.456H893.065V164.884H896.612V181.537C896.612 183.965 894.613 185.952 892.17 185.952H890.154V150.87Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M895.604 164.781H892.883V156.354H895.604V164.781Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M857.723 145.943L890.155 145.936V185.847L865.483 185.84" fill="#F1F3F6"/>
+        <path d="M857.723 145.943L890.155 145.936V185.847L865.483 185.84" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M890.155 185.847H865.416V183.299H890.155V185.847Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M890.155 165.892H863.925L864.293 168.516H890.155V165.892Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M816.487 144.682C805.099 149.859 798.878 166.663 797.822 195.099C796.36 195.081 795.075 195.03 793.966 194.946" fill="#F1F3F6"/>
+        <path d="M816.487 144.682C805.099 149.859 798.878 166.663 797.822 195.099C796.36 195.081 795.075 195.03 793.966 194.946" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M805.096 144.684C796.775 153.67 793.047 170.447 793.964 194.945L805.096 144.684Z" fill="#F1F3F6"/>
+        <path d="M805.096 144.684C796.775 153.67 793.047 170.447 793.964 194.945" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.978 210.113C608.836 210.113 595.67 197.036 595.67 181.003C595.67 164.97 608.836 151.891 624.978 151.891C641.12 151.891 654.285 164.97 654.285 181.003C654.285 197.036 641.12 210.113 624.978 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.984 198.469C615.299 198.469 607.398 190.623 607.398 181.003C607.398 171.384 615.299 163.535 624.984 163.535C634.668 163.535 642.567 171.384 642.567 181.003C642.567 190.623 634.668 198.469 624.984 198.469Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.987 186.364C622.013 186.364 619.588 183.957 619.588 181.003C619.588 178.049 622.013 175.639 624.987 175.639C627.958 175.639 630.386 178.049 630.386 181.003C630.386 183.957 627.958 186.364 624.987 186.364Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.982 196.63C616.316 196.63 609.246 189.609 609.246 181.003C609.246 172.394 616.316 165.373 624.982 165.373C633.649 165.373 640.716 172.394 640.716 181.003C640.716 189.609 633.649 196.63 624.982 196.63Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.411 210.113C283.27 210.113 270.104 197.036 270.104 181.003C270.104 164.97 283.27 151.891 299.411 151.891C315.554 151.891 328.72 164.97 328.72 181.003C328.72 197.036 315.554 210.113 299.411 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.412 198.468C289.727 198.468 281.827 190.622 281.827 181.002C281.827 171.383 289.727 163.534 299.412 163.534C309.099 163.534 316.998 171.383 316.998 181.002C316.998 190.622 309.099 198.468 299.412 198.468Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.413 186.364C296.439 186.364 294.014 183.957 294.014 181.003C294.014 178.049 296.439 175.639 299.413 175.639C302.387 175.639 304.812 178.049 304.812 181.003C304.812 183.957 302.387 186.364 299.413 186.364Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.409 196.63C290.743 196.63 283.676 189.609 283.676 181.003C283.676 172.394 290.743 165.373 299.409 165.373C308.076 165.373 315.143 172.394 315.143 181.003C315.143 189.609 308.076 196.63 299.409 196.63Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.157 210.113C221.014 210.113 207.846 197.036 207.846 181.003C207.846 164.97 221.014 151.891 237.157 151.891C253.293 151.891 266.462 164.97 266.462 181.003C266.462 197.036 253.293 210.113 237.157 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.161 198.468C227.47 198.468 219.573 190.622 219.573 181.002C219.573 171.383 227.47 163.534 237.161 163.534C246.845 163.534 254.742 171.383 254.742 181.002C254.742 190.622 246.845 198.468 237.161 198.468Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.161 186.364C234.187 186.364 231.757 183.957 231.757 181.003C231.757 178.049 234.187 175.639 237.161 175.639C240.129 175.639 242.559 178.049 242.559 181.003C242.559 183.957 240.129 186.364 237.161 186.364Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.158 196.63C228.493 196.63 221.42 189.609 221.42 181.003C221.42 172.394 228.493 165.373 237.158 165.373C245.823 165.373 252.889 172.394 252.889 181.003C252.889 189.609 245.823 196.63 237.158 196.63Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.029 210.113C158.886 210.113 145.718 197.036 145.718 181.003C145.718 164.97 158.886 151.891 175.029 151.891C191.172 151.891 204.333 164.97 204.333 181.003C204.333 197.036 191.172 210.113 175.029 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.027 198.468C165.343 198.468 157.439 190.622 157.439 181.002C157.439 171.383 165.343 163.534 175.027 163.534C184.712 163.534 192.608 171.383 192.608 181.002C192.608 190.622 184.712 198.468 175.027 198.468Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.026 186.364C172.051 186.364 169.621 183.957 169.621 181.003C169.621 178.049 172.051 175.639 175.026 175.639C177.993 175.639 180.423 178.049 180.423 181.003C180.423 183.957 177.993 186.364 175.026 186.364Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.026 196.63C166.361 196.63 159.288 189.609 159.288 181.003C159.288 172.394 166.361 165.373 175.026 165.373C183.691 165.373 190.757 172.394 190.757 181.003C190.757 189.609 183.691 196.63 175.026 196.63Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M614.833 149.269C601.333 153.55 591.509 166.173 591.509 181.003H593.668C593.668 163.824 607.686 149.896 624.984 149.896C642.278 149.896 656.297 163.824 656.297 181.003H658.456C658.456 166.139 648.637 153.555 635.094 149.299" fill="#F1F3F6"/>
+        <path d="M614.833 149.269C601.333 153.55 591.509 166.173 591.509 181.003H593.668C593.668 163.824 607.686 149.896 624.984 149.896C642.278 149.896 656.297 163.824 656.297 181.003H658.456C658.456 166.139 648.637 153.555 635.094 149.299" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M143.695 159.629H20.1881V149.314H608.511L548.043 159.629H330.691" fill="#F1F3F6"/>
+        <path d="M143.695 159.629H20.1881V149.314H608.511L548.043 159.629H330.691" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M797.882 193.643H803.808H797.882ZM799.497 153.349H659.878V193.643H793.922" fill="#F1F3F6"/>
+        <path d="M799.497 153.349H659.878V193.643H793.922M797.882 193.643H803.808H797.882Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M653.837 186.135H659.879V153.349H643.568" fill="#F1F3F6"/>
+        <path d="M653.837 186.135H659.879V153.349H643.568" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M782.441 153.348H759.445V85.2432H782.441V153.348Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M543.417 187.59H536.166V159.629H543.417V187.59Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M543.565 187.59H536.007L532.305 190.733V191.575H547.268V190.733L543.565 187.59Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M546.245 159.63V177.115L543.412 184.471" fill="#F1F3F6"/>
+        <path d="M546.245 159.63V177.115L543.412 184.471" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M533.331 159.63V177.115L536.164 184.471" fill="#F1F3F6"/>
+        <path d="M533.331 159.63V177.115L536.164 184.471" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M150.28 149.314C145.742 155.164 141.986 167.878 139.018 187.458L150.28 149.314Z" fill="#F1F3F6"/>
+        <path d="M150.28 149.314C145.742 155.164 141.986 167.878 139.018 187.458" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M148.431 149.314C143.103 158.638 139.403 171.353 137.322 187.458C137.992 187.458 138.558 187.458 139.019 187.458" fill="#F1F3F6"/>
+        <path d="M148.431 149.314C143.103 158.638 139.403 171.353 137.322 187.458C137.992 187.458 138.558 187.458 139.019 187.458" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M139.108 186.717C141.258 186.351 143.667 186.168 146.216 186.211L139.108 186.717Z" fill="#F1F3F6"/>
+        <path d="M139.108 186.717C141.258 186.351 143.667 186.168 146.216 186.211" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.126 174.128H18.5063V149.314H20.126V174.128Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5088 174.128H15.0366V166.16H18.5088V174.128Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7286 152.181H14.0055V161.794H16.7286C17.7059 161.794 18.5088 160.992 18.5088 160.011V153.961C18.5088 152.983 17.7059 152.181 16.7286 152.181Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M324.107 149.314C328.65 155.164 332.402 167.878 335.369 187.458L324.107 149.314Z" fill="#F1F3F6"/>
+        <path d="M324.107 149.314C328.65 155.164 332.402 167.878 335.369 187.458" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M325.961 149.314C331.283 158.638 334.985 171.353 337.067 187.458C336.398 187.458 335.833 187.458 335.371 187.458" fill="#F1F3F6"/>
+        <path d="M325.961 149.314C331.283 158.638 334.985 171.353 337.067 187.458C336.398 187.458 335.833 187.458 335.371 187.458" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M335.369 186.755C333.221 186.393 330.755 186.168 328.208 186.211L335.369 186.755Z" fill="#F1F3F6"/>
+        <path d="M335.369 186.755C333.221 186.393 330.755 186.168 328.208 186.211" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M208.337 186.309L203.848 186.316L208.337 186.309ZM270.729 186.309L265.941 186.306L270.729 186.309Z" fill="#F1F3F6"/>
+        <path d="M270.729 186.309L265.941 186.306M208.337 186.309L203.848 186.316L208.337 186.309Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M595.689 180.028H593.681H595.689ZM656.28 180.028H654.272H656.28Z" fill="#F1F3F6"/>
+        <path d="M656.28 180.028H654.272M595.689 180.028H593.681H595.689Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M717.037 149.314H651.721L657.646 153.348H710.373L717.037 149.314Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M875.948 58.916H782.441" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M595.292 165.946V164.115C595.292 162.903 594.29 161.909 593.069 161.909H588.289V175.699L591.999 175.706" fill="#F1F3F6"/>
+        <path d="M595.292 165.946V164.115C595.292 162.903 594.29 161.909 593.069 161.909H588.289V175.699L591.999 175.706" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M589.981 175.754H588.285V161.963H589.981V175.754Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2588 161.794H14.0053V152.182H16.2588V161.794Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M893.198 126.485H893.681C895.293 126.485 896.612 127.805 896.612 129.416V137.205C896.612 138.817 895.293 140.137 893.681 140.137H893.198V126.485Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M823.498 95.9335L785.401 87.9958V85.9434L818.568 92.9209C820.843 93.4233 822.486 94.4294 823.498 95.9335Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M823.498 89.6039L785.401 81.667V79.6143L818.568 86.5912C820.843 87.0942 822.486 88.1003 823.498 89.6039Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M823.498 83.2753L785.401 75.3376V73.2852L818.568 80.2626C820.843 80.7659 822.486 81.7691 823.498 83.2753Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M823.498 76.9465L785.401 69.0088V66.9561L818.568 73.9335C820.843 74.4368 822.486 75.44 823.498 76.9465Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M823.498 70.6166L785.401 62.6797V60.627L818.568 67.6047C820.843 68.1071 822.486 69.1104 823.498 70.6166Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M683.683 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M615.613 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M547.537 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M479.475 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M411.403 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M343.339 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M275.27 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M207.201 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M139.131 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path d="M71.0615 4.21973V145.802" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M860.097 66.4425H832.32C832.31 66.4425 832.295 66.4557 832.295 66.4661V96.0708C832.295 96.0841 832.295 96.0995 832.295 96.117L860.097 101.884V66.4425ZM867.142 110.322L867.153 120.511L882.21 120.476C882.221 120.476 882.238 120.463 882.238 120.451V110.322H867.142ZM871.439 66.4425H863.961V102.686L864.298 102.755C865.856 103.079 866.939 104.537 867.113 106.061H882.181L876.186 83.8647V77.3035L883.892 106.061H882.181H883.892V120.451C883.892 121.367 883.137 122.115 882.213 122.117L866.312 122.153C865.754 122.161 865.493 121.819 865.501 121.16L865.489 110.322V108.257H865.487L865.485 106.49C865.483 105.573 864.864 104.55 863.961 104.364L860.097 103.562L831.886 97.7078C831.063 97.7202 830.643 97.1843 830.642 96.0708V66.4661C830.642 65.5495 831.397 64.7988 832.32 64.7988H860.097H863.961H871.54C872.462 64.7988 872.974 65.5822 873.218 66.4661L876.186 77.1913V83.8647L871.621 66.8925C871.593 66.7899 871.519 66.5631 871.439 66.4425Z" fill="#F1F3F6"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M860.097 66.4425H832.32C832.31 66.4425 832.295 66.4557 832.295 66.4661V96.0708C832.295 96.0841 832.295 96.0995 832.295 96.117L860.097 101.884V66.4425ZM867.142 110.322L867.153 120.511L882.21 120.476C882.221 120.476 882.238 120.463 882.238 120.451V110.322H867.142ZM871.439 66.4425H863.961V102.686L864.298 102.755C865.856 103.079 866.939 104.537 867.113 106.061H882.181L876.186 83.8647V77.3035L883.892 106.061H882.181H883.892V120.451C883.892 121.367 883.137 122.115 882.213 122.117L866.312 122.153C865.754 122.161 865.493 121.819 865.501 121.16L865.489 110.322V108.257H865.487L865.485 106.49C865.483 105.573 864.864 104.55 863.961 104.364L860.097 103.562L831.886 97.7078C831.063 97.7202 830.643 97.1843 830.642 96.0708V66.4661C830.642 65.5495 831.397 64.7988 832.32 64.7988H860.097H863.961H871.54C872.462 64.7988 872.974 65.5822 873.218 66.4661L876.186 77.1913V83.8647L871.621 66.8925C871.593 66.7899 871.519 66.5631 871.439 66.4425Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M876.413 87.751H877.956C879.992 87.751 881.658 89.4156 881.658 91.4503V109.638C881.658 111.673 879.992 113.338 877.956 113.338H876.413V87.751Z" fill="#F1F3F6"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M876.413 87.751H877.956C879.992 87.751 881.658 89.4156 881.658 91.4503V109.638C881.658 111.673 879.992 113.338 877.956 113.338H876.413V87.751Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M876.186 71.8428H877.795C879.92 71.8428 881.658 73.5813 881.658 75.7029V81.7508C881.658 83.875 879.92 85.6109 877.795 85.6109H876.186V71.8428Z" fill="#F1F3F6"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M876.186 71.8428H877.795C879.92 71.8428 881.658 73.5813 881.658 75.7029V81.7508C881.658 83.875 879.92 85.6109 877.795 85.6109H876.186V71.8428Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M839.659 104.624H834.162C833.344 104.624 832.674 105.29 832.674 106.102V108.237H841.146V106.102C841.146 105.29 840.477 104.624 839.659 104.624Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M841.146 109.962H832.674V108.236H841.146V109.962Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M774.858 12.4336H761.856C761.741 12.4336 761.648 12.525 761.648 12.6401V13.6155C761.648 13.7306 761.741 13.8247 761.856 13.8247H774.858V12.4336Z" fill="#F1F3F6"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M774.858 12.4336H761.856C761.741 12.4336 761.648 12.525 761.648 12.6401V13.6155C761.648 13.7306 761.741 13.8247 761.856 13.8247H774.858V12.4336Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M774.858 15.8975H761.856C761.741 15.8975 761.648 15.9924 761.648 16.1067V17.0823C761.648 17.1974 761.741 17.2888 761.856 17.2888H774.858V15.8975Z" fill="#F1F3F6"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M774.858 15.8975H761.856C761.741 15.8975 761.648 15.9924 761.648 16.1067V17.0823C761.648 17.1974 761.741 17.2888 761.856 17.2888H774.858V15.8975Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M774.858 19.2822H761.856C761.741 19.2822 761.648 19.3763 761.648 19.4914V20.4662C761.648 20.5792 761.741 20.6733 761.856 20.6733H774.858V19.2822Z" fill="#F1F3F6"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M774.858 19.2822H761.856C761.741 19.2822 761.648 19.3763 761.648 19.4914V20.4662C761.648 20.5792 761.741 20.6733 761.856 20.6733H774.858V19.2822Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M768.739 36.5029H760.424C759.75 36.5029 759.198 37.0548 759.198 37.7287V56.7512C759.198 57.4253 759.75 57.9764 760.424 57.9764H768.739C769.413 57.9764 769.965 57.4253 769.965 56.7512V37.7287C769.965 37.0548 769.413 36.5029 768.739 36.5029Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M766.989 38.8496H762.17C761.93 38.8496 761.735 39.0463 761.735 39.2864V40.5017C761.735 40.741 761.93 40.9385 762.17 40.9385H766.989C767.228 40.9385 767.424 40.741 767.424 40.5017V39.2864C767.424 39.0463 767.228 38.8496 766.989 38.8496Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M755.438 7.70703H772.674C773.875 7.70703 774.858 8.68794 774.858 9.89003V63.3864H755.438V7.70703Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M865.416 185.847C863.96 186.283 862.494 186.283 861.019 185.847H865.416Z" fill="#F1F3F6"/>
+        <path d="M865.416 185.847C863.96 186.283 862.494 186.283 861.019 185.847" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M861.031 185.302C860.061 184.873 859.436 184.623 859.157 184.547L861.031 185.302Z" fill="#F1F3F6"/>
+        <path d="M861.031 185.302C860.061 184.873 859.436 184.623 859.157 184.547" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        </g>
+        <g class="wheel">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M830.06 210.113C813.918 210.113 800.752 197.036 800.752 181.003C800.752 164.97 813.918 151.891 830.06 151.891C846.203 151.891 859.368 164.97 859.368 181.003C859.368 197.036 846.203 210.113 830.06 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M830.064 196.63C821.398 196.63 814.33 189.609 814.33 181.003C814.33 172.394 821.398 165.373 830.064 165.373C838.73 165.373 845.798 172.394 845.798 181.003C845.798 189.609 838.73 196.63 830.064 196.63Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M830.063 192.953C823.436 192.953 818.032 187.585 818.032 181.002C818.032 174.421 823.436 169.052 830.063 169.052C836.69 169.052 842.095 174.421 842.095 181.002C842.095 187.585 836.69 192.953 830.063 192.953Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M830.06 184.22C828.276 184.22 826.82 182.776 826.82 181.003C826.82 179.232 828.276 177.784 830.06 177.784C831.844 177.784 833.3 179.232 833.3 181.003C833.3 182.776 831.844 184.22 830.06 184.22Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M830.061 197.166V184.22V197.166ZM830.061 177.783V164.837V177.783Z" fill="#F1F3F6"/>
+        <path d="M830.061 177.783V164.837M830.061 197.166V184.22V197.166Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M813.886 181.002H826.842H813.886ZM833.283 181.002H846.239H833.283Z" fill="#F1F3F6"/>
+        <path d="M833.283 181.002H846.239M813.886 181.002H826.842H813.886Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        </g>
+        <g class="wheel">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.979 210.113C608.837 210.113 595.671 197.036 595.671 181.003C595.671 164.97 608.837 151.891 624.979 151.891C641.122 151.891 654.287 164.97 654.287 181.003C654.287 197.036 641.122 210.113 624.979 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.981 196.629C616.315 196.629 609.247 189.608 609.247 181.002C609.247 172.393 616.315 165.372 624.981 165.372C633.647 165.372 640.715 172.393 640.715 181.002C640.715 189.608 633.647 196.629 624.981 196.629Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.98 192.954C618.353 192.954 612.949 187.585 612.949 181.003C612.949 174.421 618.353 169.052 624.98 169.052C631.607 169.052 637.012 174.421 637.012 181.003C637.012 187.585 631.607 192.954 624.98 192.954Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.981 184.22C623.197 184.22 621.741 182.775 621.741 181.003C621.741 179.232 623.197 177.784 624.981 177.784C626.765 177.784 628.221 179.232 628.221 181.003C628.221 182.775 626.765 184.22 624.981 184.22Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M624.982 197.166V184.22V197.166ZM624.982 177.783V164.837V177.783Z" fill="#F1F3F6"/>
+        <path d="M624.982 177.783V164.837M624.982 197.166V184.22V197.166Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M608.802 181.001H621.758H608.802ZM628.199 181.001H641.155H628.199Z" fill="#F1F3F6"/>
+        <path d="M628.199 181.001H641.155M608.802 181.001H621.758H608.802Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        </g>
+        <g class="wheel">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.414 210.113C283.272 210.113 270.105 197.036 270.105 181.003C270.105 164.97 283.272 151.891 299.414 151.891C315.556 151.891 328.722 164.97 328.722 181.003C328.722 197.036 315.556 210.113 299.414 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.415 196.629C290.749 196.629 283.681 189.608 283.681 181.002C283.681 172.393 290.749 165.372 299.415 165.372C308.08 165.372 315.148 172.393 315.148 181.002C315.148 189.608 308.08 196.629 299.415 196.629Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.416 192.954C292.789 192.954 287.384 187.585 287.384 181.003C287.384 174.421 292.789 169.052 299.416 169.052C306.042 169.052 311.447 174.421 311.447 181.003C311.447 187.585 306.042 192.954 299.416 192.954Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.415 184.22C297.631 184.22 296.175 182.775 296.175 181.003C296.175 179.232 297.631 177.784 299.415 177.784C301.199 177.784 302.654 179.232 302.654 181.003C302.654 182.775 301.199 184.22 299.415 184.22Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M299.418 197.166V184.22V197.166ZM299.418 177.783V164.837V177.783Z" fill="#F1F3F6"/>
+        <path d="M299.418 177.783V164.837M299.418 197.166V184.22V197.166Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M283.242 181.001H296.198H283.242ZM302.639 181.001H315.595H302.639Z" fill="#F1F3F6"/>
+        <path d="M302.639 181.001H315.595M283.242 181.001H296.198H283.242Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        </g>
+        <g class="wheel">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.157 210.113C221.015 210.113 207.848 197.036 207.848 181.003C207.848 164.97 221.015 151.891 237.157 151.891C253.299 151.891 266.465 164.97 266.465 181.003C266.465 197.036 253.299 210.113 237.157 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.156 196.629C228.49 196.629 221.422 189.608 221.422 181.002C221.422 172.393 228.49 165.372 237.156 165.372C245.822 165.372 252.89 172.393 252.89 181.002C252.89 189.608 245.822 196.629 237.156 196.629Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.155 192.954C230.528 192.954 225.123 187.585 225.123 181.003C225.123 174.421 230.528 169.052 237.155 169.052C243.782 169.052 249.187 174.421 249.187 181.003C249.187 187.585 243.782 192.954 237.155 192.954Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.16 184.22C235.376 184.22 233.92 182.775 233.92 181.003C233.92 179.232 235.376 177.784 237.16 177.784C238.944 177.784 240.399 179.232 240.399 181.003C240.399 182.775 238.944 184.22 237.16 184.22Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M237.153 197.166V184.22V197.166ZM237.153 177.783V164.837V177.783Z" fill="#F1F3F6"/>
+        <path d="M237.153 177.783V164.837M237.153 197.166V184.22V197.166Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M220.979 181.001H233.935H220.979ZM240.376 181.001H253.332H240.376Z" fill="#F1F3F6"/>
+        <path d="M240.376 181.001H253.332M220.979 181.001H233.935H220.979Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        </g>
+        <g class="wheel">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.025 210.113C158.883 210.113 145.717 197.036 145.717 181.003C145.717 164.97 158.883 151.891 175.025 151.891C191.167 151.891 204.333 164.97 204.333 181.003C204.333 197.036 191.167 210.113 175.025 210.113Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.023 196.629C166.357 196.629 159.289 189.608 159.289 181.002C159.289 172.393 166.357 165.372 175.023 165.372C183.689 165.372 190.757 172.393 190.757 181.002C190.757 189.608 183.689 196.629 175.023 196.629Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.026 192.954C168.399 192.954 162.994 187.585 162.994 181.003C162.994 174.421 168.399 169.052 175.026 169.052C181.653 169.052 187.058 174.421 187.058 181.003C187.058 187.585 181.653 192.954 175.026 192.954Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.021 184.22C173.237 184.22 171.781 182.775 171.781 181.003C171.781 179.232 173.237 177.784 175.021 177.784C176.805 177.784 178.261 179.232 178.261 181.003C178.261 182.775 176.805 184.22 175.021 184.22Z" fill="#F1F3F6" stroke="black" stroke-miterlimit="22.9256"/>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M175.023 197.166V184.22V197.166ZM175.023 177.783V164.837V177.783Z" fill="#F1F3F6"/>
+        <path d="M175.023 177.783V164.837M175.023 197.166V184.22V197.166Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M158.847 181.001H171.803H158.847ZM178.244 181.001H191.2H178.244Z" fill="#F1F3F6"/>
+        <path d="M178.244 181.001H191.2M158.847 181.001H171.803H158.847Z" stroke="black" stroke-miterlimit="22.9256"/>
+        </g>
+        </g>
+      </svg>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<section class="geography">
+  <div class="geography_wrap content-wrap">
+    <h2 class="geography_title">География доставки</h2>
+
+
+    <div class="map-slider">
+      <div class="map-slider_list">
+
+        <div class="map-slider_item">
+          <div class="map-slider_content">
+            <div class="map-slider_text">
+              <h4 class="map-slider_title fade-in">Доставка сборных грузов по РФ</h4>
+              <div class="map-slider_description fade-in">
+                Доставка сборных грузов осуществляется автомобильным транспортом и в
+                почтово-багажных вагонах по РФ. Срок доставки от 1 дня. Обширная география.
+              </div>
+            </div>
+            <div class="map-slider_img fade-in-opacity">
+              <img src="images/map-slider_01.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="map-slider_item">
+          <div class="map-slider_content">
+            <div class="map-slider_text">
+              <h4 class="map-slider_title fade-in">Доставка сборных грузов из Китая в РФ</h4>
+              <div class="map-slider_description fade-in">
+                Доставка осуществляется автомобильным и железнодорожным транспортом с
+                использованием контейнеров и почтово-багажных вагонов.
+              </div>
+            </div>
+            <div class="map-slider_img fade-in-opacity">
+              <img src="images/map-slider_02.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="map-slider_item">
+          <div class="map-slider_content">
+            <div class="map-slider_text">
+              <h4 class="map-slider_title fade-in">Доставка сборных грузов из Европы в РФ</h4>
+              <div class="map-slider_description fade-in">
+                Доставка осуществляется автомобильным транспортом
+              </div>
+            </div>
+            <div class="map-slider_img fade-in-opacity">
+              <img src="images/map-slider_03.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="map-slider_item">
+          <div class="map-slider_content">
+            <div class="map-slider_text">
+              <h4 class="map-slider_title fade-in">Доставка на удаленные объекты</h4>
+              <div class="map-slider_description fade-in">
+                Доставка сборных грузов на удаленные объекты нефте-газовой отрасли (Сабетта (Ямал),
+                Новый Уренгой, Лунское (Сахалин), Кингисепп, Свободный, Мурманск, Новороссийск, Кстово и д.р.)
+              </div>
+            </div>
+            <div class="map-slider_img fade-in-opacity">
+              <img src="images/map-slider_04.png" alt="">
+            </div>
+          </div>
+        </div>
+    </div><!-- end map-slider-list -->
+  </div>
+</section>
+
+
+<section class="partners">
+  <div class="content-wrap">
+    <div class="partners_head fade-in">
+      <div class="block-nav">
+        <span class="block-nav_title">Наши партнеры</span>
+      </div>
+      <div class="insert">Мы зарекомендовали себя как надежного и профессионального партнера</div>
+    </div>
+
+    <div class="slider-logo fade-in">
+      <div class="slider-logo_list">
+        <div class="slider-logo_item">
+          <div class="slider-logo_content">
+            <div class="slider-logo_img"><img src="images/logo_01.png" alt=""></div>
+            <a href="#" class="slider-logo_link">читать отзыв</a>
+          </div>
+        </div>
+        <div class="slider-logo_item">
+          <div class="slider-logo_content">
+            <div class="slider-logo_img"><img src="images/logo_02.png" alt=""></div>
+            <a href="#" class="slider-logo_link">читать отзыв</a>
+          </div>
+        </div>
+        <div class="slider-logo_item">
+          <div class="slider-logo_content">
+            <div class="slider-logo_img"><img src="images/logo_03.png" alt=""></div>
+            <a href="#" class="slider-logo_link">читать отзыв</a>
+          </div>
+        </div>
+        <div class="slider-logo_item">
+          <div class="slider-logo_content">
+            <div class="slider-logo_img"><img src="images/logo_04.png" alt=""></div>
+            <a href="#" class="slider-logo_link">читать отзыв</a>
+          </div>
+        </div>
+        <div class="slider-logo_item">
+          <div class="slider-logo_content">
+            <div class="slider-logo_img"><img src="images/logo_03.png" alt=""></div>
+            <a href="#" class="slider-logo_link">читать отзыв</a>
+          </div>
+        </div>
+      </div>
+    </div><!--end slider -->
+  </div>
+</section>
+
+<section class="news">
+  <div class="news_wrap content-wrap">
+    <div class="news-item block-nav fade-in">
+      <span class="block-nav_title">Новости</span>
+      <a href="#" class="block-nav_link">все новости</a>
+    </div>
+    <a href="#" class="news-item fade-in">
+      <div class="news-item_img">
+        <img src="images/news_01.png" alt="">
+      </div>
+      <div class="news-item_text">
+        <span class="date">27.08.2020</span>
+        <h5 class="news-item_title">Теперь мы возим грузы в самые отдаленные районы РФ мы возим грузы в самые отдаленные районы РФ</h5>
+        <div class="news-item_description">Перевозка нескольких партий груза в одном транспортном средстве (автомобиле / контейнере). Сборный груз. Перевозка нескольких партий груза в одном транспортном средстве (автомобиле / контейнере). Сборный груз.</div>
+      </div>
+    </a>
+    <a href="#" class="news-item fade-in">
+      <div class="news-item_img">
+        <img src="images/news_02.png" alt="">
+      </div>
+      <div class="news-item_text">
+        <span class="date">27.08.2020</span>
+        <h5 class="news-item_title">Теперь мы возим грузы в самые отдаленные районы РФ мы возим грузы в самые отдаленные районы РФ</h5>
+      </div>
+    </a>
+    <a href="#" class="news-item fade-in">
+      <div class="news-item_img">
+        <img src="images/news_03.png" alt="">
+      </div>
+      <div class="news-item_text">
+        <span class="date">27.08.2020</span>
+        <h5 class="news-item_title">Теперь мы возим грузы в самые отдаленные районы РФ мы возим грузы в самые отдаленные районы РФ</h5>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<section class="costing">
+  <div class="content-wrap">
+    <h2 class="costing_title">Рассчитать стоимость перевозки</h2>
+    <!-- <span class="costing_subtitle">Информация о грузе</span> -->
+
+    <form action="" class="cost-form main-cost-form">
+
+      <div class="cost-form_part-1 active">
+        <div class="cost-form_input-wrap">
+          <div class="input">
+            <label for="">Откуда доставить</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Куда доставить</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Наименование груза</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Тип транспорта</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Вес груза, кг</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Объем груза, м³</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Комментарий</label>
+            <textarea name="name"></textarea>
+          </div>
+        </div>
+        <div class="form-dots">
+          <div class="form-dots_item active"></div>
+          <div class="form-dots_item"></div>
+        </div>
+        <button class="cost-form-btn-next">Далее</button>
+      </div><!-- end cost-form part-1 -->
+
+      <div class="cost-form_part-2">
+        <div class="cost-form_input-wrap">
+          <div class="input">
+            <label for="">ИНН компании</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Название компании</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">Ваше имя</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+          </div>
+          <div class="input">
+            <label for="">Телефон</label>
+            <input type="text" class="required">
+          </div>
+          <div class="input">
+            <label for="">E-mail</label>
+            <input type="text" class="required">
+          </div>
+
+          <div class="checkbox">
+            <input type='checkbox' id='checkbox_1' value='Да' class="checkbox-required">
+            <label for='checkbox_1'>даю согласие на обработку персональных данных</label>
+          </div>
+
+        </div>
+        <div class="form-dots">
+          <div class="form-dots_item"></div>
+          <div class="form-dots_item active"></div>
+        </div>
+        <div class="cost-form_btn-wrap">
+          <button class="cost-form-btn-prev">Назад</button>
+          <div class="cost-form-btn disabled">Рассчитать</div>
+        </div>
+      </div><!-- end cost-form part-2 -->
+
+    </form>
+
+  </div>
+</section>
+
+
+
+<section class="map container">
+  <img class="map_img" src="images/map.png" alt="">
+  <div class="map_wrap content-wrap">
+    <div class="contact-block fade-in-opacity">
+      <h4 class="contact-block_title">Остались вопросы? Напишите нам</h4>
+      <div class="contact-block_description">
+        Вы можете воспользоваться формой обратной связи или заказать
+        звонок нашего оператора. Мы ответим вам в тесение 15 минут
+      </div>
+      <a href="#" class="cost-form-btn">Написать нам</a>
+    </div>
+  </div>
+</section>
+
+<div class="animation-img">
+  <img src="images/plane.svg" alt="" class="plane">
+  <img src="images/ship.svg" alt="" class="ship">
+</div>
+
+<!-- <button class="btn-fix">Отправьте нам сообщение</button> -->
+
+<div class="modal modal-sent">
+  <div class="modal_wrap">
+    <div class="modal-block modal-sent_block">
+
+      <div class="modal-sent_text">
+        <h4 class="modal-block_title">Ваша заявка принята и находится в обработке</h4>
+        <div class="modal-block_description">В ближайшее время с Вами свяжется свободный менеджер с расчетом по стоимости интересующий услуги.</div>
+        <button class="modal-block_btn">Закрыть</button>
+      </div>
+      <div class="modal-sent_img">
+        <img src="images/modal-sent-img.png" alt="">
+      </div>
+
+
+
+      <div class="modal-close">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.34668 0.501953L11.4651 10.6204L21.5835 0.501953" stroke="white"/>
+          <path d="M21.582 20.7402L11.4636 10.6218L1.34523 20.7402" stroke="white"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal callback">
+  <div class="modal_wrap">
+    <div class="modal-block modal-callback">
+
+        <h4 class="modal-block_title">Заказать обратный звонок</h4>
+
+        <form action="" class="callback-form">
+          <input type="text" placeholder="ваше имя">
+          <input type="text" placeholder="телефон">
+          <div class="checkbox">
+            <input type='checkbox' id='checkbox_0' value='Да'  >
+            <label for='checkbox_0'>даю согласие на обработку персональных данных</label>
+          </div>
+          <button class="cost-form-btn">Заказать звонок</button>
+        </form>
+
+
+
+
+      <div class="modal-close">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.34668 0.501953L11.4651 10.6204L21.5835 0.501953" stroke="white"/>
+          <path d="M21.582 20.7402L11.4636 10.6218L1.34523 20.7402" stroke="white"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="content-wrap">
+    <div class="footer-top">
+      <div class="footer-top_left">
+        <a href="/" class="f-logo">
+          <img src="images/f-logo.svg" alt="">
+        </a>
+        <div class="f-contacts">
+          <div class="f-contacts_item">Россия, г. Москва, м. Тульская, ул. Дубининская, д. 71, стр.7</div>
+          <div class="f-contacts_item">Телефон: <a href="tel:84957446123">8 (495)744-61-23</a></div>
+          <div class="f-contacts_item">E-mail: <a href="mailto:info@ltlogistic">info@ltlogistic</a></div>
+        </div>
+      </div>
+      <div class="footer-top_right">
+        <h5 class="f-title">Услуги</h5>
+        <div class="f-nav">
+          <a href="#" class="f-nav_link">Сборные грузы</a>
+          <a href="#" class="f-nav_link">Перевозка по России</a>
+          <a href="#" class="f-nav_link">Доставка в отдаленные районы</a>
+          <a href="#" class="f-nav_link">Доставка из Китая</a>
+          <a href="#" class="f-nav_link">Доставка из Европы</a>
+          <a href="#" class="f-nav_link">Складское хранение</a>
+          <a href="#" class="f-nav_link">Оформление и таможня</a>
+          <a href="#" class="f-nav_link">Услуги по лигистике</a>
+          <a href="#" class="f-nav_link">Сборные грузы</a>
+          <a href="#" class="f-nav_link">Перевозка по России</a>
+          <a href="#" class="f-nav_link">Доставка в отдаленные районы</a>
+          <a href="#" class="f-nav_link">Доставка из Китая</a>
+        </div>
+      </div>
+    </div><!-- end footer-top -->
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        © 2020. LT Logistic Все права защищены
+      </div>
+      <div class="dev">
+        <div class="dev_text"><span>Разработка сайта - </span><a href="#">web анатомия</a></div>
+        <a href="" class="dev_logo">
+          <img src="images/webanatomy.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+</body>
+</html>
+

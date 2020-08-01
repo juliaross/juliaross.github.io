@@ -238,6 +238,12 @@ input, button, textarea, select {
 .section_3 {
   background: #eee9e6; }
 
+.section_4 {
+  background: #e8edf4; }
+
+.section_5 {
+  background: #faf4f0; }
+
 .mac {
   position: fixed;
   top: 25%;
@@ -363,7 +369,8 @@ input, button, textarea, select {
     font-size: 10px;
     margin-right: 6px;
     margin-bottom: 6px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: default; }
     @media (max-width: 480px) {
       .technologies_item {
         padding: 2px 6px;
@@ -372,6 +379,9 @@ input, button, textarea, select {
         font-size: 8px; } }
     .technologies_item:last-child {
       margin-right: 0; }
+    .technologies_item:hover {
+      color: #535e6e;
+      border-color: #535e6e; }
 
 .links {
   text-align: right; }
